@@ -1,5 +1,7 @@
 const express =  require('express');
 const router = express.Router();
-const getAllBooks = require('../controller/getAllBooks')
-router.use('/get-all-books',getAllBooks)
+const bookStore = require('../controller/book_store')
+const user = require('../controller/user')
+router.use('/book-store',bookStore)
+router.use('/User',user)
 module.exports = router
