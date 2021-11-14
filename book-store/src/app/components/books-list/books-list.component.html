@@ -1,0 +1,21 @@
+<div class="bookList">
+<h1>{{title}}</h1>
+<div>
+    <input class="SearchBox" type="text" placeholder="Search Your Book Here..." [(ngModel)]="filteredData" />
+</div> 
+</div>
+
+<div class="card" *ngFor="let item of Books | filter:filteredData:'book_name'">
+    <div class="Imagehead">
+        <img src="{{item.image_url}}" alt="dataImages" class="dataImage">
+        <p class="price">Price: ₹{{item.book_price}}</p>
+    </div>
+    <div class="dataAll">
+        <span class="bookName">{{item.book_name}}</span>
+        <p class="description">Description:- {{item.book_description}}</p>
+        <button>Buy Now</button>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,77 @@
+ .bookList{
+    margin: 10px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.SearchBtn, .SearchBox{
+    height: 30px;
+    border: none;
+    outline: 0;
+    padding: 2px;
+    color:#1B1F65;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 2px;
+    
+}
+.headcard{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dataImage{
+    width: 300px;
+    height: 300px;
+}
+.bookName{
+    color: #FFB842;
+    font-weight: 700;
+    font-size: 30px;
+}
+.dataAll{
+    padding: 10px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-family: arial;
+    padding: 20px;
+    margin: 10px;
+  }
+
+ .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: #1B1F65;
+    background-color:#FFB842;
+    text-align: center;
+    cursor: pointer;
+    width: 30%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .description{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1B1F65;
+      font-weight: 500;
+  } 
+
+  /* .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  } */
+  
+  
