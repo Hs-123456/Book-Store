@@ -1,21 +1,41 @@
-<form>
-    <div class="form-row">
+<div *ngIf="status" class="alert alert-success" role="alert">
+  Order Create Successfully
+</div>
+<div class="container">
+  
+  <div class="row">
+    <div class="col"><div class="card" *ngFor="let item of Books">
+      <div class="Imagehead">
+          <img src="{{item.image_url}}" alt="dataImages" class="dataImage">
+          <p class="price">Price: ₹{{item.book_price}}</p>
+      </div>
+      <div class="dataAll">
+          <span class="bookName">{{item.book_name}}</span>
+          <p class="description">Description:- {{item.book_description}}</p>
+        
+      </div>
+  </div></div>
+    <div class="col"><form [formGroup]="orderBookForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="inputPassword4">Name:</label>
+              <input type="text" formControlName="name" class="form-control" id="inputPassword4" placeholder="Enter Your Name Here...">
+            </div>
         <div class="form-group col-md-6">
-            <label for="inputPassword4">Name:</label>
-            <input type="text" class="form-control" id="inputPassword4" placeholder="Enter Your Name Here...">
-          </div>
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" formControlName="email" id="inputEmail4" placeholder="Enter Your Email Here">
+        </div>    
+      </div>
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Your Email Here">
-      </div>    
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputAddress">Phone No</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Your Contact No">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputAddress2">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Your meeting Address">
-    </div>
-    <button type="submit" class="btn btn-primary">Place Order</button>
-  </form>
+        <label for="inputAddress">Phone No</label>
+        <input type="text" class="form-control" formControlName="phone" id="inputAddress" placeholder="Your Contact No">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputAddress2">Address</label>
+        <input type="text" class="form-control" formControlName="address" id="inputAddress" placeholder="Deliver Address">
+      </div>
+      <button type="submit" class="btn btn-primary">Place Order</button>
+    </form>
+  </div>
+  </div>
+</div>

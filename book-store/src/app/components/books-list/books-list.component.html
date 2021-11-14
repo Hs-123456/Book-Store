@@ -13,7 +13,7 @@
     <div class="dataAll">
         <span class="bookName">{{item.book_name}}</span>
         <p class="description">Description:- {{item.book_description}}</p>
-        <button>Buy Now</button>
+        <button (click)="changeRoute(item.id)">Buy Now</button>
     </div>
 </div>
 
