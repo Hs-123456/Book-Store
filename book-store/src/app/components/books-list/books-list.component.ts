@@ -11,7 +11,7 @@ export class BooksListComponent implements OnInit {
   Books: any
   title="List of All Books"
   constructor(private route: Router, http: HttpClient) { 
-    http.get('http://localhost:5000/book-store/get-all-books').subscribe(res =>{
+    http.get('https://ancient-castle-99651.herokuapp.com/book-store/get-all-books').subscribe(res =>{
       this.Books = res;
       console.log(this.Books)
     })

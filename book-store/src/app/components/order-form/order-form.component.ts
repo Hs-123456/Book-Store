@@ -24,7 +24,7 @@ export class OrderFormComponent implements OnInit {
 
    onSubmit(){
     this.orderBookForm.value.bookId = this.Books[0].id
-    this.http.post("http://localhost:5000/book-store/order-details",this.orderBookForm.value).subscribe((responseData)=>{
+    this.http.post("https://ancient-castle-99651.herokuapp.com/book-store/order-details",this.orderBookForm.value).subscribe((responseData)=>{
           if(responseData){
               this.status = true
               setTimeout(()=>{
@@ -36,7 +36,7 @@ export class OrderFormComponent implements OnInit {
    }
   ngOnInit(): void {
     this.route.params.subscribe((params: Params)=>{
-      this.http.get(`http://localhost:5000/book-store/get-bookBy-id/${params.id}`).subscribe(responseData =>{
+      this.http.get(`https://ancient-castle-99651.herokuapp.com/book-store/get-bookBy-id/${params.id}`).subscribe(responseData =>{
           this.Books = responseData
       })
     })
